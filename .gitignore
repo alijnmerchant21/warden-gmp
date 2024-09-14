@@ -132,3 +132,5 @@ dist
 
 # other
 .env
+
+.DS_Store
