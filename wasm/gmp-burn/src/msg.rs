@@ -1,20 +1,41 @@
-use serde::{Deserialize, Serialize};
+use cosmwasm_schema::cw_serde;
+use cosmwasm_std::Binary;
 
-#[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
-pub struct InstantiateMsg {
-    // No initialization parameters are needed
-}
+#[cw_serde]
+pub struct InstantiateMsg {}
 
-#[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
+#[cw_serde]
 pub enum ExecuteMsg {
     SendMessageEvm {
         destination_chain: String,
         destination_address: String,
-        amount: String, // Amount to burn, as a string
+        message: String,
     },
 }
 
-#[derive(Serialize, Deserialize, Clone, Debug, PartialEq)]
-pub struct QueryMsg {
-    // No queries are needed for this demo
+#[cw_serde]
+pub enum QueryMsg {
+    GetStoredMessage {},
+}
+
+#[cw_serde]
+pub struct GetStoredMessageResp {
+    pub sender: String,
+    pub message: String,
+}
+
+#[cw_serde]
+pub struct Fee {
+    pub amount: String,
+    pub recipient: String,
+}
+
+#[cw_serde]
+pub struct GmpMessage {
+    pub destination_chain: String,
+    pub destination_address: String,
+    pub payload: Vec<u8>,
+    #[serde(rename = "type")]
+    pub type_: i64,
+    pub fee: Option<Fee>,
 }
