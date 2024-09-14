@@ -1,0 +1,163 @@
+{
+  "contractName": "IContractIdentifier",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "contractId",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"contractId\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"contractId()\":{\"details\":\"Meant to be overridden in derived contracts.\",\"returns\":{\"_0\":\"bytes32 The contract ID\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"contractId()\":{\"notice\":\"Returns the contract ID. It can be used as a check during upgrades.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol\":\"IContractIdentifier\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol\":{\"keccak256\":\"0x21a94655f7f1ed3d7188bd38ce6187892c615b80f9a74e123cbc38113d855a35\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e7e1f30e159d40a9f8431c26955a584507bc23a30f19380c723acdb4182ba7c1\",\"dweb:/ipfs/QmXb965di5pU3m3W36k19ZX8m6qCDaEi1jEt6NocqrGPXj\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n// General interface for upgradable contracts\ninterface IContractIdentifier {\n    /**\n     * @notice Returns the contract ID. It can be used as a check during upgrades.\n     * @dev Meant to be overridden in derived contracts.\n     * @return bytes32 The contract ID\n     */\n    function contractId() external pure returns (bytes32);\n}\n",
+  "sourcePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol",
+  "ast": {
+    "absolutePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol",
+    "exportedSymbols": {
+      "IContractIdentifier": [
+        523
+      ]
+    },
+    "id": 524,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 516,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IContractIdentifier",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 523,
+        "linearizedBaseContracts": [
+          523
+        ],
+        "name": "IContractIdentifier",
+        "nameLocation": "114:19:3",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "documentation": {
+              "id": 517,
+              "nodeType": "StructuredDocumentation",
+              "src": "140:190:3",
+              "text": " @notice Returns the contract ID. It can be used as a check during upgrades.\n @dev Meant to be overridden in derived contracts.\n @return bytes32 The contract ID"
+            },
+            "functionSelector": "8291286c",
+            "id": 522,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "contractId",
+            "nameLocation": "344:10:3",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 518,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "354:2:3"
+            },
+            "returnParameters": {
+              "id": 521,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 520,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 522,
+                  "src": "380:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 519,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "380:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "379:9:3"
+            },
+            "scope": 523,
+            "src": "335:54:3",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 524,
+        "src": "104:287:3",
+        "usedErrors": [],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:359:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-09-14T06:10:37.555Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "contractId()": {
+        "details": "Meant to be overridden in derived contracts.",
+        "returns": {
+          "_0": "bytes32 The contract ID"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "contractId()": {
+        "notice": "Returns the contract ID. It can be used as a check during upgrades."
+      }
+    },
+    "version": 1
+  }
+}

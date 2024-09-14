@@ -1,0 +1,690 @@
+{
+  "contractName": "IGovernable",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "InvalidGovernance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "InvalidMintLimiter",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotGovernance",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "NotMintLimiter",
+      "type": "error"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousGovernance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "GovernanceTransferred",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "previousGovernance",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "MintLimiterTransferred",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "governance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mintLimiter",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "transferGovernance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "transferMintLimiter",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"InvalidGovernance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"InvalidMintLimiter\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotGovernance\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"NotMintLimiter\",\"type\":\"error\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousGovernance\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"GovernanceTransferred\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousGovernance\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"MintLimiterTransferred\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"governance\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mintLimiter\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"transferGovernance\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newGovernance\",\"type\":\"address\"}],\"name\":\"transferMintLimiter\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"governance()\":{\"returns\":{\"_0\":\"address of the governance\"}},\"mintLimiter()\":{\"returns\":{\"_0\":\"address of the mint limiter\"}},\"transferGovernance(address)\":{\"params\":{\"newGovernance\":\"The new governance address\"}},\"transferMintLimiter(address)\":{\"params\":{\"newGovernance\":\"The new mint limiter address\"}}},\"title\":\"IGovernable Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"governance()\":{\"notice\":\"Returns the governance address.\"},\"mintLimiter()\":{\"notice\":\"Returns the mint limiter address.\"},\"transferGovernance(address)\":{\"notice\":\"Transfer the governance role to another address.\"},\"transferMintLimiter(address)\":{\"notice\":\"Transfer the mint limiter role to another address.\"}},\"notice\":\"This is an interface used by the AxelarGateway contract to manage governance and mint limiter roles.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IGovernable.sol\":\"IGovernable\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IGovernable.sol\":{\"keccak256\":\"0x686c534975bfc4e00f89be5e4a779a41a63f7c5fc204429c839bcdbf09584fd0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://62a095681384a2be0b6ecb31729ff6507d663559d1f3d0dd5d1f6ba8ac6a1c95\",\"dweb:/ipfs/Qmf8FZX4w3e49LsF1Vnn7u63w8KeuLiHVAKCmbgGdfuTG4\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n/**\n * @title IGovernable Interface\n * @notice This is an interface used by the AxelarGateway contract to manage governance and mint limiter roles.\n */\ninterface IGovernable {\n    error NotGovernance();\n    error NotMintLimiter();\n    error InvalidGovernance();\n    error InvalidMintLimiter();\n\n    event GovernanceTransferred(address indexed previousGovernance, address indexed newGovernance);\n    event MintLimiterTransferred(address indexed previousGovernance, address indexed newGovernance);\n\n    /**\n     * @notice Returns the governance address.\n     * @return address of the governance\n     */\n    function governance() external view returns (address);\n\n    /**\n     * @notice Returns the mint limiter address.\n     * @return address of the mint limiter\n     */\n    function mintLimiter() external view returns (address);\n\n    /**\n     * @notice Transfer the governance role to another address.\n     * @param newGovernance The new governance address\n     */\n    function transferGovernance(address newGovernance) external;\n\n    /**\n     * @notice Transfer the mint limiter role to another address.\n     * @param newGovernance The new mint limiter address\n     */\n    function transferMintLimiter(address newGovernance) external;\n}\n",
+  "sourcePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IGovernable.sol",
+  "ast": {
+    "absolutePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IGovernable.sol",
+    "exportedSymbols": {
+      "IGovernable": [
+        571
+      ]
+    },
+    "id": 572,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 525,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:4"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGovernable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 526,
+          "nodeType": "StructuredDocumentation",
+          "src": "58:151:4",
+          "text": " @title IGovernable Interface\n @notice This is an interface used by the AxelarGateway contract to manage governance and mint limiter roles."
+        },
+        "fullyImplemented": false,
+        "id": 571,
+        "linearizedBaseContracts": [
+          571
+        ],
+        "name": "IGovernable",
+        "nameLocation": "220:11:4",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "b56f932c",
+            "id": 528,
+            "name": "NotGovernance",
+            "nameLocation": "244:13:4",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 527,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "257:2:4"
+            },
+            "src": "238:22:4"
+          },
+          {
+            "errorSelector": "4475507a",
+            "id": 530,
+            "name": "NotMintLimiter",
+            "nameLocation": "271:14:4",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 529,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "285:2:4"
+            },
+            "src": "265:23:4"
+          },
+          {
+            "errorSelector": "0063186c",
+            "id": 532,
+            "name": "InvalidGovernance",
+            "nameLocation": "299:17:4",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 531,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "316:2:4"
+            },
+            "src": "293:26:4"
+          },
+          {
+            "errorSelector": "d79d772c",
+            "id": 534,
+            "name": "InvalidMintLimiter",
+            "nameLocation": "330:18:4",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 533,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "348:2:4"
+            },
+            "src": "324:27:4"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "5f56bee8cffbe9a78652a74a60705edede02af10b0bbb888ca44b79a0d42ce80",
+            "id": 540,
+            "name": "GovernanceTransferred",
+            "nameLocation": "363:21:4",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 539,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 536,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "previousGovernance",
+                  "nameLocation": "401:18:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 540,
+                  "src": "385:34:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 535,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "385:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 538,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "437:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 540,
+                  "src": "421:29:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 537,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "421:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "384:67:4"
+            },
+            "src": "357:95:4"
+          },
+          {
+            "anonymous": false,
+            "eventSelector": "a9303c860c5de3c0c866c354d281785c89778ac5ca2dffdf12841c45cd4e1e6e",
+            "id": 546,
+            "name": "MintLimiterTransferred",
+            "nameLocation": "463:22:4",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 545,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 542,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "previousGovernance",
+                  "nameLocation": "502:18:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "486:34:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 541,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "486:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 544,
+                  "indexed": true,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "538:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 546,
+                  "src": "522:29:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 543,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "522:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "485:67:4"
+            },
+            "src": "457:96:4"
+          },
+          {
+            "documentation": {
+              "id": 547,
+              "nodeType": "StructuredDocumentation",
+              "src": "559:99:4",
+              "text": " @notice Returns the governance address.\n @return address of the governance"
+            },
+            "functionSelector": "5aa6e675",
+            "id": 552,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "governance",
+            "nameLocation": "672:10:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 548,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "682:2:4"
+            },
+            "returnParameters": {
+              "id": 551,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 550,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 552,
+                  "src": "708:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 549,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "708:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "707:9:4"
+            },
+            "scope": 571,
+            "src": "663:54:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 553,
+              "nodeType": "StructuredDocumentation",
+              "src": "723:103:4",
+              "text": " @notice Returns the mint limiter address.\n @return address of the mint limiter"
+            },
+            "functionSelector": "c82fe87a",
+            "id": 558,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintLimiter",
+            "nameLocation": "840:11:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 554,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "851:2:4"
+            },
+            "returnParameters": {
+              "id": 557,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 556,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 558,
+                  "src": "877:7:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 555,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "877:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "876:9:4"
+            },
+            "scope": 571,
+            "src": "831:55:4",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 559,
+              "nodeType": "StructuredDocumentation",
+              "src": "892:130:4",
+              "text": " @notice Transfer the governance role to another address.\n @param newGovernance The new governance address"
+            },
+            "functionSelector": "d38bfff4",
+            "id": 564,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferGovernance",
+            "nameLocation": "1036:18:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 562,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 561,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "1063:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 564,
+                  "src": "1055:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 560,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1055:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1054:23:4"
+            },
+            "returnParameters": {
+              "id": 563,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1086:0:4"
+            },
+            "scope": 571,
+            "src": "1027:60:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 565,
+              "nodeType": "StructuredDocumentation",
+              "src": "1093:134:4",
+              "text": " @notice Transfer the mint limiter role to another address.\n @param newGovernance The new mint limiter address"
+            },
+            "functionSelector": "41d8f26b",
+            "id": 570,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "transferMintLimiter",
+            "nameLocation": "1241:19:4",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 568,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 567,
+                  "mutability": "mutable",
+                  "name": "newGovernance",
+                  "nameLocation": "1269:13:4",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 570,
+                  "src": "1261:21:4",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 566,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1261:7:4",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1260:23:4"
+            },
+            "returnParameters": {
+              "id": 569,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1292:0:4"
+            },
+            "scope": 571,
+            "src": "1232:61:4",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 572,
+        "src": "210:1085:4",
+        "usedErrors": [
+          528,
+          530,
+          532,
+          534
+        ],
+        "usedEvents": [
+          540,
+          546
+        ]
+      }
+    ],
+    "src": "33:1263:4"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-09-14T06:10:37.556Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "governance()": {
+        "returns": {
+          "_0": "address of the governance"
+        }
+      },
+      "mintLimiter()": {
+        "returns": {
+          "_0": "address of the mint limiter"
+        }
+      },
+      "transferGovernance(address)": {
+        "params": {
+          "newGovernance": "The new governance address"
+        }
+      },
+      "transferMintLimiter(address)": {
+        "params": {
+          "newGovernance": "The new mint limiter address"
+        }
+      }
+    },
+    "title": "IGovernable Interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "governance()": {
+        "notice": "Returns the governance address."
+      },
+      "mintLimiter()": {
+        "notice": "Returns the mint limiter address."
+      },
+      "transferGovernance(address)": {
+        "notice": "Transfer the governance role to another address."
+      },
+      "transferMintLimiter(address)": {
+        "notice": "Transfer the mint limiter role to another address."
+      }
+    },
+    "notice": "This is an interface used by the AxelarGateway contract to manage governance and mint limiter roles.",
+    "version": 1
+  }
+}

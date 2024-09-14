@@ -1,0 +1,236 @@
+{
+  "contractName": "IImplementation",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "NotProxy",
+      "type": "error"
+    },
+    {
+      "inputs": [],
+      "name": "contractId",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "setup",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.20+commit.a1b79de6\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"NotProxy\",\"type\":\"error\"},{\"inputs\":[],\"name\":\"contractId\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"setup\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"contractId()\":{\"details\":\"Meant to be overridden in derived contracts.\",\"returns\":{\"_0\":\"bytes32 The contract ID\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"contractId()\":{\"notice\":\"Returns the contract ID. It can be used as a check during upgrades.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IImplementation.sol\":\"IImplementation\"},\"evmVersion\":\"shanghai\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol\":{\"keccak256\":\"0x21a94655f7f1ed3d7188bd38ce6187892c615b80f9a74e123cbc38113d855a35\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e7e1f30e159d40a9f8431c26955a584507bc23a30f19380c723acdb4182ba7c1\",\"dweb:/ipfs/QmXb965di5pU3m3W36k19ZX8m6qCDaEi1jEt6NocqrGPXj\"]},\"@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IImplementation.sol\":{\"keccak256\":\"0xa7f275514d44bec3ab8ab8c768736329174d7cc6c5cd329c3509a66bce9cd468\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://983e8c97e4916b47244d71fa104fc368100991561fe8c28f1a6bae043763754d\",\"dweb:/ipfs/QmeFeJsCowShVsAe6RMiz3qjY2JTyRNYRRu1oYQcN9T6uV\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport { IContractIdentifier } from './IContractIdentifier.sol';\n\ninterface IImplementation is IContractIdentifier {\n    error NotProxy();\n\n    function setup(bytes calldata data) external;\n}\n",
+  "sourcePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IImplementation.sol",
+  "ast": {
+    "absolutePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IImplementation.sol",
+    "exportedSymbols": {
+      "IContractIdentifier": [
+        523
+      ],
+      "IImplementation": [
+        585
+      ]
+    },
+    "id": 586,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 573,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:5"
+      },
+      {
+        "absolutePath": "@axelar-network/axelar-gmp-sdk-solidity/contracts/interfaces/IContractIdentifier.sol",
+        "file": "./IContractIdentifier.sol",
+        "id": 575,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 586,
+        "sourceUnit": 524,
+        "src": "58:64:5",
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 574,
+              "name": "IContractIdentifier",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 523,
+              "src": "67:19:5",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 576,
+              "name": "IContractIdentifier",
+              "nameLocations": [
+                "153:19:5"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 523,
+              "src": "153:19:5"
+            },
+            "id": 577,
+            "nodeType": "InheritanceSpecifier",
+            "src": "153:19:5"
+          }
+        ],
+        "canonicalName": "IImplementation",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 585,
+        "linearizedBaseContracts": [
+          585,
+          523
+        ],
+        "name": "IImplementation",
+        "nameLocation": "134:15:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "errorSelector": "bf10dd3a",
+            "id": 579,
+            "name": "NotProxy",
+            "nameLocation": "185:8:5",
+            "nodeType": "ErrorDefinition",
+            "parameters": {
+              "id": 578,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:2:5"
+            },
+            "src": "179:17:5"
+          },
+          {
+            "functionSelector": "9ded06df",
+            "id": 584,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setup",
+            "nameLocation": "211:5:5",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 582,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 581,
+                  "mutability": "mutable",
+                  "name": "data",
+                  "nameLocation": "232:4:5",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 584,
+                  "src": "217:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 580,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "217:5:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "216:21:5"
+            },
+            "returnParameters": {
+              "id": 583,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "246:0:5"
+            },
+            "scope": 585,
+            "src": "202:45:5",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 586,
+        "src": "124:125:5",
+        "usedErrors": [
+          579
+        ],
+        "usedEvents": []
+      }
+    ],
+    "src": "33:217:5"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.20+commit.a1b79de6.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-09-14T06:10:37.556Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "contractId()": {
+        "details": "Meant to be overridden in derived contracts.",
+        "returns": {
+          "_0": "bytes32 The contract ID"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "contractId()": {
+        "notice": "Returns the contract ID. It can be used as a check during upgrades."
+      }
+    },
+    "version": 1
+  }
+}
