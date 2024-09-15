@@ -39,8 +39,8 @@ pub fn execute(
             deps,
             env,
             info,
-            destination_chain,
-            destination_address,
+            //destination_chain,
+            //destination_address,
             message,
         )
 
@@ -56,19 +56,22 @@ mod exec {
         _deps: DepsMut,
         env: Env,
         info: MessageInfo,
-        destination_chain: String,
-        destination_address: String,
-        message: String,
+        message: String,  // Keep message as a dynamic input
     ) -> Result<Response, ContractError> {
+        
+        // Hardcode the destination values
+        let destination_chain = "sepolia".to_string();
+        let destination_address = "0x5388dE880a16Ba9602746F3799E850E78148cd57".to_string();
+    
         // Message payload to be received by the destination
         let message_payload = encode(&vec![
-            Token::String(info.sender.to_string()),
-            Token::String(message),
+            Token::String(info.sender.to_string()),  // Sender info
+            Token::String(message),  // The message itself
         ]);
-
+    
         // {info.funds} used to pay gas. Must only contain 1 token type.
         let coin: cosmwasm_std::Coin = cw_utils::one_coin(&info).unwrap();
-
+    
         let gmp_message: GmpMessage = GmpMessage {
             destination_chain,
             destination_address,
@@ -76,10 +79,10 @@ mod exec {
             type_: 1,
             fee: None,
         };
-
+    
         let ibc_message = crate::ibc::MsgTransfer {
             source_port: "transfer".to_string(),
-            source_channel: "channel-3".to_string(), // Testnet Osmosis to axelarnet: https://docs.axelar.dev/resources/testnet#ibc-channels
+            source_channel: "channel-1".to_string(), // Warden Testnet
             token: Some(coin.into()),
             sender: env.contract.address.to_string(),
             receiver: "axelar1dv4u5k73pzqrxlzujxg3qp8kvc3pje7jtdvu72npnt5zhq05ejcsn5qme5"
@@ -88,10 +91,10 @@ mod exec {
             timeout_timestamp: Some(env.block.time.plus_seconds(604_800u64).nanos()),
             memo: to_string(&gmp_message).unwrap(),
         };
-
+    
         Ok(Response::new().add_message(ibc_message))
     }
-}
+}   
 
 /* SPDX-License-Identifier: MIT
 
