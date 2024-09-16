@@ -40,3 +40,12 @@ Summary
 > Total deployments:   1
 > Final cost:          0.003389958982165822 ETH
 ```
+
+## Examples
+
+- [Cosmos-EVM](https://github.com/axelarnetwork/send-message-from-cosmos-to-evm-example)
+- [Contract](https://sepolia.etherscan.io/token/0x5388de880a16ba9602746f3799e850e78148cd57?a=0x5388dE880a16Ba9602746F3799E850E78148cd57)
+- [Call-Contract](https://github.com/axelarnetwork/axelar-examples/tree/main/examples/cosmos/call-contract)
+- [Contract-Address](https://docs.axelar.dev/resources/contract-addresses/testnet/)
+- [Send-Recieve](https://github.com/axelarnetwork/evm-cosmos-gmp-sample/tree/main/cosmwasm-integration/send-receive)
+- [IBC-Channel](https://docs.axelar.dev/resources/contract-addresses/testnet/#ibc-channels)
