@@ -1,5 +1,6 @@
 use cosmwasm_schema::cw_serde;
-use cosmwasm_std::Binary;
+// use cosmwasm_std::Binary;
+use cosmwasm_std::Uint256;
 
 #[cw_serde]
 pub struct InstantiateMsg {}
@@ -7,9 +8,7 @@ pub struct InstantiateMsg {}
 #[cw_serde]
 pub enum ExecuteMsg {
     SendMessageEvm {
-        destination_chain: String,
-        destination_address: String,
-        message: String,
+        amount_to_burn: Uint256,
     },
 }
 

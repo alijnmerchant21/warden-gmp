@@ -9,10 +9,10 @@ mod unit_tests;
 
 pub use crate::error::ContractError;
 
-use msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
+use msg::{ExecuteMsg, InstantiateMsg};
 
 use cosmwasm_std::entry_point;
-use cosmwasm_std::{Binary, Deps, DepsMut, Env, MessageInfo, Response, StdResult};
+use cosmwasm_std::{DepsMut, Env, MessageInfo, Response};
 
 #[cfg_attr(not(feature = "library"), entry_point)]
 pub fn instantiate(
